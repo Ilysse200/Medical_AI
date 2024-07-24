@@ -49,6 +49,7 @@
     </body>
 </html> -->
 
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -79,13 +80,15 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         h1 {
-            color: #155b34;
+            color: #000;
         }
-        container {
+        .container {
             padding: 20px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
+            text-align: center;
         }
         .grid-container {
             display: grid;
@@ -120,9 +123,30 @@
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #155b34;
+            background-color: #123d25; /* Darker green for hover */
         }
-    </style>
+        a {
+            display: block; /* Center the link */
+            text-align: center;
+            margin: 10px auto;
+            padding: 8px 16px;
+            background-color: #155b34;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #123d25; /* Darker shade for hover */
+        }
+
+        .container h1.name, .container h1.result {
+    color: #000; /* Black color for Name and Result */
+}
+
+
+</style>
 </head>
 <body onload="calculateBMI()">
     <div class="navbar">
@@ -138,3 +162,5 @@
     </div>
 </body>
 </html>
+    
+    
